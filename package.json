@@ -1,0 +1,26 @@
+{
+  "name": "trabajoindividual2",
+  "version": "1.0.1",
+  "description": "Segunda Entrega Idividual",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "hbs": "^4.0.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "https://github.com/joca1128/SegundaEntregaIndividual"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joca1128/SegundaEntregaIndividual.git"
+  },
+  "author": "jorgeCastillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joca1128/SegundaEntregaIndividual/issues"
+  },
+  "homepage": "https://github.com/joca1128/SegundaEntregaIndividual#readme"
+}
