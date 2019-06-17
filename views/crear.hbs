@@ -1,0 +1,39 @@
+{{listar}}
+{{>cabeza}} 
+        <h1>CREAR CURSOS</h1> 
+        {{>opciones}}
+        {{#if nombre}}     
+            {{{guardar nombre id descripcion valor modalidad intensidad_horaria}}}
+        {{else}}
+        <form action="/crear" method="get">
+            <table align="center" border="1px solid black" >
+                <tr >
+                    <th>Nombre del curso</th> 
+                    <th>Id del curso</th> 
+                    <th>Descripción del curso</th> 
+                </tr>
+                <tr>   
+                    <td ><input type="text" name="nombre" autocomplete="off" required></td>
+                    <td><input type="number" name="id" min="0" autocomplete="off" required ></td>
+                    <td><input type="text" name="descripcion"  autocomplete="off" required ></td>
+                </tr>
+                <tr>
+                    <th>Valor del curso</th> 
+                    <th>Modalidad del curso</th> 
+                    <th>Intensidad horaria del curso</th> 
+                </tr>
+                <tr>
+                   <td><input type="number" name="valor" min="0" autocomplete="off" required ></td>
+                   <td><input type="text" name="modalidad" list="modalidades" autocomplete="off" ></td>
+                   <td><input type="number" name="intensidad_horaria" min="0" autocomplete="off"></td>
+                </tr>
+                
+                <tr><td><button>submit</button></td></tr>
+                <datalist id="modalidades">
+                    <option value="Virtual">
+                    <option value="Presencial">
+                </datalist>
+            </table>
+        </form>
+        {{/if}}
+{{>pies}}

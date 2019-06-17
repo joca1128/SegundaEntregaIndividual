@@ -1,0 +1,36 @@
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0em;
+    margin-right: 0;
+    font-weight: bold;
+    color: cyan;
+    text-align: center;
+}
+
+h2 {
+    color: chocolate;
+}
+
+h4 {
+    color: coral;
+}
+
+td {
+    text-align: center;
+
+}
+
+a {
+    color: coral;
+    text-decoration-line: none;
+}
+table {
+    margin-bottom: 5%;
+}
+th {
+    text-align: center;
+    color: coral;
+}

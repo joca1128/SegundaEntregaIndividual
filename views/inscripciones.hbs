@@ -1,0 +1,32 @@
+{{listar}}
+{{>cabeza}}
+    {{#if cancelar}}
+        {{cancelarCurso cancelar}}
+    {{/if}}
+    <h1>INSCRIPCIONES</h1>
+{{>opciones}}
+
+{{{mostrarEstudiantesCursos}}}
+        <script>
+            function funcion(numero) {
+                var x = document.getElementById(String(numero));
+                var y = document.getElementById(String(numero+Number(100)));
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } 
+                else {
+                x.style.display = "none";
+                }
+                if (y.firstChild.data == "Ver Estudiantes Inscritos En Este Curso") {
+                    y.firstChild.data = "Ocultar Estudiantes De Este Curso";
+                }
+                else {
+                     y.firstChild.data = "Ver Estudiantes Inscritos En Este Curso";
+                }
+            }
+            function cancelar(numero){
+                var x =document.getElementById(String(numero));
+                x.style.display="none";
+            }
+        </script>
+{{>pies}}

@@ -1,0 +1,33 @@
+{{listar}}
+{{>cabeza}}
+    <h1>INSCRIBIRSE</h1>
+    {{>opciones}}
+    {{#if nombre}}
+        {{{guardarest nombre cedula correo curso telefono}}}
+    {{else}}
+        <form action="/inscribirse" method="get">
+            <table align="center" border="1px solid black">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cédula</th> 
+                    <th>Correo</th> 
+                </tr>
+                <tr>
+                    <td><input type="text" name="nombre" required></td>
+                    <td><input type="number" name="cedula" min="0" required></td>
+                    <td><input type="email" name="correo" required></td>
+                </tr>
+                <tr>
+                    <th>Id del curso a inscribirse</th>
+                    <th>Teléfono</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="curso" list="cursos"  required></td>
+                    <td><input type="number" name="telefono" min="0" required></td>
+                     <td ><button>submit</button></td>
+                </tr>
+                {{{Desplegar}}}
+            </table>
+        </form>
+    {{/if}}
+    {{>pies}}

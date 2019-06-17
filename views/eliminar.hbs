@@ -1,0 +1,45 @@
+{{listar}}
+{{>cabeza}}
+<h1>ELIMINAR ESTUDIANTE</h1>
+{{>opciones}}
+{{#if cedula}}
+    {{{eliminar cedula curso}}}
+    {{{mostrarEstudiantesCur}}}
+{{else}}
+    <h2>FORMULARIO PARA ELIMINAR ESTUDIANTE</h2>
+    <form action="/eliminar" method="get">
+        <table border="1px solid black">
+            <tr>
+                <th>Cédula del estudiante a Eliminar</th>
+                <th>id del curso del que lo desea eliminar</th>
+            </tr>
+            <tr>
+                <td><input type="number" name="cedula" required></td>
+                <td><input type="text" name="curso" list="cursos"required></td>
+            </tr>
+            <tr>
+                <td><button>Eliminar</button><td>
+            </tr>
+            {{{Desplegar}}}
+        </table>
+    </form>
+{{/if}}
+    <script>
+            function funcion(numero) {
+                var x = document.getElementById(String(numero));
+                var y = document.getElementById(String(numero+Number(100)));
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } 
+                else {
+                x.style.display = "none";
+                }
+                if (y.firstChild.data == "Ver Estudiantes Inscritos En Este Curso") {
+                    y.firstChild.data = "Ocultar Estudiantes De Este Curso";
+                }
+                else {
+                     y.firstChild.data = "Ver Estudiantes Inscritos En Este Curso";
+                }
+            }
+    </script>
+{{>pies}}

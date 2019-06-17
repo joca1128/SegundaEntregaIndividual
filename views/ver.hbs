@@ -1,0 +1,24 @@
+{{listar}}
+{{>cabeza}}
+        <h1>VER CURSOS</h1> 
+        {{>opciones}}
+        {{{mostrarCursos}}}
+        <script>
+            function funcion(numero) {
+                var x = document.getElementById(String(numero));
+                var y = document.getElementById(String(numero+100));
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } 
+                else {
+                x.style.display = "none";
+                }
+                if (y.firstChild.data == "Ver Información Completa") {
+                    y.firstChild.data = "Ocultar Información";
+                }
+                else {
+                     y.firstChild.data = "Ver Información Completa";
+                }
+            }
+        </script>
+{{pies}}
