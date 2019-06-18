@@ -10,11 +10,11 @@
 ```
 2. Para correr el app.js desde fuera de la carpeta raiz usar
 ```bash
-    nodemon fuente/app -e js,hbs
+    nodemon fuente/app
 ```  
 3. Para correr el app.js usar desde la carpeta raiz
 ```bash
-    nodemon app -e js,hbs
+    nodemon app
 ``` 
 4. Luego abrir el navegador y digitar la localhost con el puerto 3000
 ```bash
